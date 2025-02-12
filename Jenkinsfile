@@ -7,7 +7,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Build : This is triggered from git event'
+                sh 'ls -lrt > sample.txt'
+                archiveArtifacts allowEmptyArchive: true, artifacts: '*.txt', fingerprint: true, followSymlinks: false, onlyIfSuccessful: true
             }
         }
         stage('Test') {
