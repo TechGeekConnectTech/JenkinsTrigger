@@ -12,5 +12,10 @@ pipeline {
                 echo 'Test : This is triggered from git event'
             }
         }
+        stage('Deploy') {
+            steps {
+                echo 'Deploy : This is triggered from git event'
+            }
+        }
     }
 }
