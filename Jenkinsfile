@@ -4,7 +4,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'This is triggered from git event'
+                echo 'Build : This is triggered from git event'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Test : This is triggered from git event'
             }
         }
     }
