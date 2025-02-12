@@ -2,6 +2,7 @@ pipeline {
     agent any
     parameters {
         choice(name:'Environment',choices:['DEV','UAT','PROD'],description:'')
+        string(name:'Enter your name',defaultVaule:'TechGeekConnect',description:'')
     }
     stages {
         stage('Build') {
